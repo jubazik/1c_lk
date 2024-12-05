@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'categories.apps.CategoriesConfig',
     'price.apps.PriceConfig',
     'django_filters',
+    'cml',
 
 ]
 
@@ -140,7 +141,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication', ],
     'DEFAULT_FILTER_BACKENDS': [
-        'django_filters.rest_framework.DjangoFilterBackend',    ],
+        'django_filters.rest_framework.DjangoFilterBackend', ],
 }
 
 CORS_ALLOWER_ORIGINS = [
@@ -155,3 +156,4 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": False,
 }
+CML_PROJECT_PIPELINES = 'project.cml_pipelines'

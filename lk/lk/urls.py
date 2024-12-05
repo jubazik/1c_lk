@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('categories.urls')),
     path('', include('price.urls')),
+    path('cml/', include('cml.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
